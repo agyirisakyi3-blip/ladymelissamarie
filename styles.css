@@ -1725,6 +1725,665 @@ img {
     }
 }
 
+/* Short Intro Section */
+.short-intro {
+    background: var(--light-color);
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-image {
+    position: relative;
+}
+
+.intro-image img {
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.5s ease;
+}
+
+.intro-image:hover img {
+    transform: scale(1.02);
+}
+
+.intro-image-border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.intro-text h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.intro-text strong {
+    color: var(--primary-color);
+}
+
+/* Ministry Snapshot */
+.ministry-snapshot {
+    background: var(--gradient-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.ministry-snapshot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 0L40 20L20 40L0 20z'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.ministry-snapshot .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.ministry-snapshot .section-header h2 {
+    color: white;
+}
+
+.ministry-snapshot .section-header p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1.1rem;
+}
+
+.snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.snapshot-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.snapshot-card:nth-child(1) { animation-delay: 0.1s; }
+.snapshot-card:nth-child(2) { animation-delay: 0.2s; }
+.snapshot-card:nth-child(3) { animation-delay: 0.3s; }
+
+.snapshot-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.snapshot-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(30, 58, 138, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.5s ease;
+}
+
+.snapshot-card:hover .snapshot-icon {
+    transform: scale(1.15) rotate(10deg);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.snapshot-icon i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.snapshot-card:hover .snapshot-icon i {
+    color: white;
+}
+
+.snapshot-card h3 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.snapshot-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.snapshot-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.snapshot-link:hover {
+    color: white;
+    gap: 12px;
+}
+
+.snapshot-link i {
+    transition: transform 0.3s ease;
+}
+
+.snapshot-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Calling Statement */
+.calling-statement {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.calling-statement-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.calling-statement-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.quote-mark {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.calling-statement-content blockquote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.calling-statement-content .author {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Home CTA */
+.home-cta {
+    background: var(--light-color);
+}
+
+.cta-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.cta-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.cta-card:nth-child(1) { animation-delay: 0.1s; }
+.cta-card:nth-child(2) { animation-delay: 0.2s; }
+.cta-card:nth-child(3) { animation-delay: 0.3s; }
+
+.cta-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-card-icon {
+    width: 90px;
+    height: 90px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.5s ease;
+}
+
+.cta-card:hover .cta-card-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+}
+
+.cta-card-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.cta-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.cta-card p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Teachings Page */
+.teachings-intro {
+    text-align: center;
+    background: var(--light-color);
+}
+
+.teachings-intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.teachings-intro-content h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.teachings-intro-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Ministry Overview */
+.ministry-overview {
+    background: var(--gradient-dark);
+    padding: 80px 0;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.overview-text h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.overview-text p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+}
+
+.overview-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.overview-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.overview-image:hover img {
+    transform: scale(1.05);
+}
+
+.overview-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(212, 175, 55, 0.2));
+    pointer-events: none;
+}
+
+/* Ministry Focus */
+.ministry-focus {
+    background: var(--light-color);
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.focus-item {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.focus-item:nth-child(1) { animation-delay: 0.1s; }
+.focus-item:nth-child(2) { animation-delay: 0.2s; }
+.focus-item:nth-child(3) { animation-delay: 0.3s; }
+.focus-item:nth-child(4) { animation-delay: 0.4s; }
+.focus-item:nth-child(5) { animation-delay: 0.5s; }
+
+.focus-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.focus-number {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(30, 58, 138, 0.05);
+}
+
+.focus-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.5s ease;
+}
+
+.focus-item:hover .focus-icon {
+    transform: scale(1.15) rotate(10deg);
+}
+
+.focus-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.focus-item h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.focus-item p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Ministry Service */
+.ministry-service {
+    background: var(--gradient-dark);
+    text-align: center;
+}
+
+.service-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+}
+
+.service-icon-large {
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.service-icon-large i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.service-content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.service-text {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.service-text strong {
+    color: var(--secondary-color);
+}
+
+/* Ministry Vision Banner */
+.ministry-vision-banner {
+    position: relative;
+    padding: 100px 0;
+    background: url('images/back.jpeg') center/cover no-repeat fixed;
+    text-align: center;
+}
+
+.ministry-vision-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+.vision-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.vision-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.ministry-vision-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.ministry-vision-content blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Teachings Content */
+.teachings-content {
+    background: var(--light-color);
+}
+
+.teachings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.teaching-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.teaching-card:nth-child(1) { animation-delay: 0.1s; }
+.teaching-card:nth-child(2) { animation-delay: 0.2s; }
+.teaching-card:nth-child(3) { animation-delay: 0.3s; }
+.teaching-card:nth-child(4) { animation-delay: 0.4s; }
+
+.teaching-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.teaching-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.teaching-card:hover::before {
+    transform: scaleX(1);
+}
+
+.teaching-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.5s ease;
+}
+
+.teaching-card:hover .teaching-icon {
+    transform: scale(1.1) rotate(10deg);
+    background: var(--gradient-secondary);
+}
+
+.teaching-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.teaching-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.teaching-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.teaching-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(212, 175, 55, 0.1));
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+}
+
+/* Responsive for home page */
+@media (max-width: 1024px) {
+    .snapshot-grid,
+    .cta-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .focus-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .teachings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Contact */
 .contact-intro {
     text-align: center;
@@ -2510,6 +3169,41 @@ img {
 
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .snapshot-grid,
+    .cta-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teachings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calling-statement-content {
+        padding: 40px 20px;
+    }
+
+    .calling-statement-content blockquote {
+        font-size: 1.2rem;
     }
 
     .footer-grid {
