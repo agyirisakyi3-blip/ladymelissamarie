@@ -1,17 +1,17 @@
 :root {
-    --primary-color: #1E3A8A;
+    --primary-color: #000000;
     --secondary-color: #D4AF37;
-    --accent-color: #3B82F6;
-    --dark-color: #0A1628;
-    --light-color: #FFFFFF;
-    --text-color: #1E293B;
-    --text-light: #475569;
-    --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    --accent-color: #D4AF37;
+    --dark-color: #000000;
+    --light-color: #0A0A0A;
+    --text-color: #FFFFFF;
+    --text-light: #CCCCCC;
+    --gradient-primary: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
     --gradient-secondary: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
-    --gradient-dark: linear-gradient(135deg, #0A1628 0%, #1E3A8A 100%);
-    --shadow-sm: 0 2px 10px rgba(30, 58, 138, 0.1);
-    --shadow-md: 0 5px 20px rgba(30, 58, 138, 0.15);
-    --shadow-lg: 0 10px 40px rgba(30, 58, 138, 0.2);
+    --gradient-dark: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+    --shadow-sm: 0 2px 10px rgba(212, 175, 55, 0.1);
+    --shadow-md: 0 5px 20px rgba(212, 175, 55, 0.15);
+    --shadow-lg: 0 10px 40px rgba(212, 175, 55, 0.2);
     --transition: all 0.3s ease;
 }
 
@@ -61,7 +61,7 @@ img {
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
@@ -105,25 +105,26 @@ img {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
-    color: white;
+    background: var(--gradient-secondary);
+    color: #000000;
     box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #F59E0B 0%, #D4AF37 100%);
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
+    background: var(--gradient-secondary);
+    color: #000000;
 }
 
 .btn-full {
@@ -137,7 +138,7 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 22, 40, 0.85);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(15px);
     padding: 18px 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -169,7 +170,7 @@ img {
 
 .navbar.scrolled {
     padding: 12px 0;
-    background: rgba(10, 22, 40, 0.98);
+    background: rgba(0, 0, 0, 0.98);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3), 0 0 40px rgba(212, 175, 55, 0.05);
     border-bottom-color: rgba(212, 175, 55, 0.1);
 }
@@ -265,7 +266,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(30, 58, 138, 0.1));
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.1));
     border-radius: 8px;
     transform: scale(0);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -301,7 +302,7 @@ img {
 
 .nav-links a.active {
     color: white;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(30, 58, 138, 0.15));
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(0, 0, 0, 0.15));
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
@@ -311,7 +312,7 @@ img {
 }
 
 .nav-links a.active:hover {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(30, 58, 138, 0.25));
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(0, 0, 0, 0.25));
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
 }
 
@@ -419,7 +420,7 @@ img {
 .mobile-menu-btn span {
     width: 25px;
     height: 3px;
-    background: white;
+    background: #111111;
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -453,7 +454,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(10, 22, 40, 0.85) 0%, rgba(30, 58, 138, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.75) 100%);
 }
 
 .hero-content {
@@ -515,7 +516,7 @@ img {
     transform: translateX(-50%);
     width: 4px;
     height: 10px;
-    background: white;
+    background: #111111;
     border-radius: 2px;
     animation: scrollDown 1.5s infinite;
 }
@@ -542,7 +543,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(30, 58, 138, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.85) 100%);
 }
 
 .page-header-content {
@@ -606,7 +607,7 @@ img {
 }
 
 .service-card {
-    background: white;
+    background: #111111;
     padding: 40px 30px;
     border-radius: 15px;
     text-align: center;
@@ -622,7 +623,7 @@ img {
 .service-icon {
     width: 80px;
     height: 80px;
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -637,7 +638,7 @@ img {
 
 .service-card h3 {
     font-size: 1.3rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
@@ -677,7 +678,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(212, 175, 55, 0.3) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(212, 175, 55, 0.3) 100%);
     opacity: 0;
     transition: var(--transition);
 }
@@ -775,7 +776,7 @@ img {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -787,7 +788,7 @@ img {
 }
 
 .journey-highlight {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(212, 175, 55, 0.05));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(212, 175, 55, 0.05));
     border-left: 4px solid var(--secondary-color);
     padding: 40px;
     border-radius: 0 20px 20px 0;
@@ -810,7 +811,7 @@ img {
 .journey-date span {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -900,7 +901,7 @@ img {
 .calling-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(30, 58, 138, 0.2));
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -971,7 +972,7 @@ img {
     width: 60px;
     height: 60px;
     min-width: 60px;
-    background: white;
+    background: #111111;
     border: 3px solid var(--secondary-color);
     border-radius: 50%;
     display: flex;
@@ -999,7 +1000,7 @@ img {
 }
 
 .encounter-content {
-    background: white;
+    background: #111111;
     border-radius: 15px;
     padding: 25px 30px;
     box-shadow: var(--shadow-md);
@@ -1017,7 +1018,7 @@ img {
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-right-color: white;
+    border-right-color: #333333;
 }
 
 .encounter-item:hover .encounter-content {
@@ -1036,7 +1037,7 @@ img {
 
 .encounter-content h3 {
     font-size: 1.3rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -1085,7 +1086,7 @@ img {
 
 .about-section h2 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .about-section p {
@@ -1103,7 +1104,7 @@ img {
     margin: 0 auto;
     text-align: center;
     padding: 50px;
-    background: white;
+    background: #111111;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
     position: relative;
@@ -1118,7 +1119,7 @@ img {
 .quote-box blockquote {
     font-size: 1.5rem;
     font-style: italic;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     line-height: 1.6;
 }
 
@@ -1130,7 +1131,7 @@ img {
 }
 
 .mv-card {
-    background: white;
+    background: #111111;
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
@@ -1158,7 +1159,7 @@ img {
 .mv-icon {
     width: 90px;
     height: 90px;
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1173,7 +1174,7 @@ img {
 
 .mv-card h2 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -1194,7 +1195,7 @@ img {
 }
 
 .value-item {
-    background: white;
+    background: #111111;
     padding: 35px;
     border-radius: 15px;
     box-shadow: var(--shadow-sm);
@@ -1222,7 +1223,7 @@ img {
 
 .value-item h3 {
     font-size: 1.4rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -1264,7 +1265,7 @@ img {
 
 .ventures-intro-content h2 {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
@@ -1276,7 +1277,7 @@ img {
 
 /* Impact Stats Section */
 .impact-stats {
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     position: relative;
     overflow: hidden;
     padding: 80px 0;
@@ -1359,7 +1360,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(30, 58, 138, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.85) 100%);
 }
 
 .vision-banner-content {
@@ -1418,9 +1419,9 @@ img {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 20% 50%, rgba(30, 58, 138, 0.03) 0%, transparent 50%),
+    background: radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.03) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(30, 58, 138, 0.02) 0%, transparent 50%);
+                radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
     animation: bgShift 20s ease-in-out infinite;
     pointer-events: none;
 }
@@ -1439,7 +1440,7 @@ img {
 }
 
 .unit-card {
-    background: white;
+    background: #111111;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -1494,11 +1495,11 @@ img {
 
 .unit-card:hover {
     transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(10, 22, 40, 0.15), 0 10px 20px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(212, 175, 55, 0.1);
 }
 
 .unit-header {
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     padding: 30px;
     text-align: center;
     color: white;
@@ -1624,7 +1625,7 @@ img {
 
 .unit-features li:hover {
     transform: translateX(8px);
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .unit-features li i {
@@ -1634,7 +1635,7 @@ img {
 
 .unit-features li:hover i {
     transform: scale(1.3) rotate(10deg);
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Credentials Page */
@@ -1651,7 +1652,7 @@ img {
 
 .credentials-intro h2 {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
@@ -1667,7 +1668,7 @@ img {
 }
 
 .credential-category {
-    background: white;
+    background: #111111;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -1706,7 +1707,7 @@ img {
 }
 
 .category-header {
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     padding: 30px;
     text-align: center;
     color: white;
@@ -1775,7 +1776,7 @@ img {
 }
 
 .credential-item.featured {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(212, 175, 55, 0.05));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(212, 175, 55, 0.05));
     padding: 25px 20px;
     border-radius: 12px;
     margin-top: 10px;
@@ -1809,7 +1810,7 @@ img {
 }
 
 .credential-item:hover .credential-title {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .credential-institution {
@@ -1827,7 +1828,7 @@ img {
 .professional-card {
     max-width: 800px;
     margin: 0 auto;
-    background: white;
+    background: #111111;
     border-radius: 20px;
     padding: 50px;
     box-shadow: var(--shadow-lg);
@@ -1854,7 +1855,7 @@ img {
 
 .professional-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(10, 22, 40, 0.15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .professional-icon {
@@ -1887,7 +1888,7 @@ img {
 
 .professional-content h3 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -1901,10 +1902,10 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(212, 175, 55, 0.1));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(212, 175, 55, 0.1));
     padding: 10px 20px;
     border-radius: 50px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -1979,7 +1980,7 @@ img {
 
 .intro-text h2 {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -1991,7 +1992,7 @@ img {
 }
 
 .intro-text strong {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Ministry Snapshot */
@@ -2060,7 +2061,7 @@ img {
 .snapshot-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(30, 58, 138, 0.2));
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2145,7 +2146,7 @@ img {
     max-width: 900px;
     margin: 0 auto;
     padding: 60px 40px;
-    background: white;
+    background: #111111;
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
 }
@@ -2160,7 +2161,7 @@ img {
 .calling-statement-content blockquote {
     font-size: 1.6rem;
     font-style: italic;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     line-height: 1.6;
     margin-bottom: 25px;
 }
@@ -2184,7 +2185,7 @@ img {
 }
 
 .cta-card {
-    background: white;
+    background: #111111;
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
@@ -2206,7 +2207,7 @@ img {
 .cta-card-icon {
     width: 90px;
     height: 90px;
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2217,7 +2218,7 @@ img {
 
 .cta-card:hover .cta-card-icon {
     transform: scale(1.1) rotate(10deg);
-    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .cta-card-icon i {
@@ -2227,7 +2228,7 @@ img {
 
 .cta-card h3 {
     font-size: 1.4rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
@@ -2251,7 +2252,7 @@ img {
 
 .teachings-intro-content h2 {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
@@ -2308,7 +2309,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(212, 175, 55, 0.2));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(212, 175, 55, 0.2));
     pointer-events: none;
 }
 
@@ -2324,7 +2325,7 @@ img {
 }
 
 .focus-item {
-    background: white;
+    background: #111111;
     border-radius: 20px;
     padding: 35px 20px;
     text-align: center;
@@ -2353,7 +2354,7 @@ img {
     right: 15px;
     font-size: 2.5rem;
     font-weight: 800;
-    color: rgba(30, 58, 138, 0.05);
+    color: rgba(0, 0, 0, 0.05);
 }
 
 .focus-icon {
@@ -2379,7 +2380,7 @@ img {
 
 .focus-item h3 {
     font-size: 1.1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 12px;
 }
 
@@ -2497,7 +2498,7 @@ img {
 }
 
 .teaching-card {
-    background: white;
+    background: #111111;
     border-radius: 20px;
     padding: 40px 25px;
     text-align: center;
@@ -2539,7 +2540,7 @@ img {
 .teaching-icon {
     width: 80px;
     height: 80px;
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2560,7 +2561,7 @@ img {
 
 .teaching-card h3 {
     font-size: 1.3rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -2574,8 +2575,8 @@ img {
 .teaching-badge {
     display: inline-block;
     padding: 6px 16px;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(212, 175, 55, 0.1));
-    color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(212, 175, 55, 0.1));
+    color: var(--secondary-color);
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2612,7 +2613,7 @@ img {
 
 .contact-intro-content h2 {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
@@ -2681,7 +2682,7 @@ img {
 .detail-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(30, 58, 138, 0.2));
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2753,7 +2754,7 @@ img {
     max-width: 700px;
     margin: 0 auto;
     padding: 40px;
-    background: white;
+    background: #111111;
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
 }
@@ -2778,7 +2779,7 @@ img {
 
 .invitation-content h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -2843,7 +2844,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(10, 22, 40, 0.3), rgba(30, 58, 138, 0.8));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
 }
 
 .contact-form-image-text {
@@ -2869,7 +2870,7 @@ img {
 }
 
 .contact-form-card {
-    background: white;
+    background: #111111;
     padding: 50px;
 }
 
@@ -2879,7 +2880,7 @@ img {
 
 .form-header h2 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -2912,7 +2913,7 @@ img {
     gap: 8px;
     margin-bottom: 8px;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -2928,11 +2929,12 @@ img {
 .form-group-enhanced textarea {
     width: 100%;
     padding: 14px 18px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #333333;
     border-radius: 12px;
     font-size: 1rem;
+    color: #FFFFFF;
     transition: all 0.3s ease;
-    background: #f8f9fa;
+    background: #1A1A1A;
 }
 
 .form-group-enhanced input:hover,
@@ -2945,9 +2947,14 @@ img {
 .form-group-enhanced select:focus,
 .form-group-enhanced textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
-    background: white;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+    background: #222222;
+}
+
+.form-group-enhanced select option {
+    background: #1A1A1A;
+    color: #FFFFFF;
 }
 
 .form-group-enhanced textarea {
@@ -2987,7 +2994,7 @@ img {
 
 .btn-enhanced:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .btn-enhanced:hover i {
@@ -3007,7 +3014,7 @@ img {
 .contact-info-section h2,
 .contact-form-section h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -3034,7 +3041,7 @@ img {
 .contact-icon {
     width: 60px;
     height: 60px;
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -3049,7 +3056,7 @@ img {
 
 .contact-details h3 {
     font-size: 1.1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -3062,7 +3069,7 @@ img {
 }
 
 .contact-details a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .contact-form {
@@ -3079,7 +3086,7 @@ img {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .form-group input,
@@ -3091,15 +3098,15 @@ img {
     border-radius: 10px;
     font-size: 1rem;
     transition: var(--transition);
-    background: white;
+    background: #111111;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .form-message {
@@ -3111,16 +3118,16 @@ img {
 
 .form-message.success {
     display: block;
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background: rgba(40, 167, 69, 0.2);
+    color: #71dd37;
+    border: 1px solid rgba(40, 167, 69, 0.3);
 }
 
 .form-message.error {
     display: block;
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+    background: rgba(220, 53, 69, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(220, 53, 69, 0.3);
 }
 
 /* Social Section */
@@ -3131,7 +3138,7 @@ img {
 
 .social-content h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -3150,7 +3157,7 @@ img {
 .social-link {
     width: 60px;
     height: 60px;
-    background: var(--gradient-primary);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -3273,7 +3280,7 @@ img {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(10, 22, 40, 0.98);
+        background: rgba(0, 0, 0, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
