@@ -1128,6 +1128,309 @@ img {
     color: var(--primary-color);
 }
 
+/* Credentials Page */
+.credentials-section {
+    background: var(--light-color);
+    position: relative;
+}
+
+.credentials-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.credentials-intro h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.credentials-intro p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.credential-category {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    animation: cardReveal 0.8s ease forwards;
+}
+
+.credential-category:nth-child(1) { animation-delay: 0.1s; }
+.credential-category:nth-child(2) { animation-delay: 0.2s; }
+.credential-category:nth-child(3) { animation-delay: 0.3s; }
+.credential-category:nth-child(4) { animation-delay: 0.4s; }
+
+.credential-category:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.credential-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.credential-category:hover::before {
+    transform: scaleX(1);
+}
+
+.category-header {
+    background: var(--gradient-primary);
+    padding: 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.credential-category:hover .category-header::after {
+    transform: scale(1);
+}
+
+.category-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.credential-category:hover .category-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.category-icon i {
+    font-size: 2rem;
+}
+
+.category-header h3 {
+    font-size: 1.4rem;
+}
+
+.credential-list {
+    padding: 30px;
+}
+
+.credential-item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    transform: translateX(0);
+}
+
+.credential-item:last-child {
+    border-bottom: none;
+}
+
+.credential-item:hover {
+    transform: translateX(8px);
+}
+
+.credential-item.featured {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(212, 175, 55, 0.05));
+    padding: 25px 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.credential-date {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.credential-date::before {
+    content: '\f073';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.credential-title {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.credential-item:hover .credential-title {
+    color: var(--primary-color);
+}
+
+.credential-institution {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Professional Section */
+.professional-section {
+    background: var(--light-color);
+    padding-top: 0;
+}
+
+.professional-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: cardReveal 0.8s ease forwards;
+}
+
+.professional-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.professional-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(10, 22, 40, 0.15);
+}
+
+.professional-icon {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.professional-card:hover .professional-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+}
+
+.professional-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.professional-content {
+    text-align: center;
+    flex: 1;
+}
+
+.professional-content h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.professional-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.professional-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(212, 175, 55, 0.1));
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.professional-badge i {
+    color: var(--secondary-color);
+}
+
+/* Responsive for credentials */
+@media (max-width: 1024px) {
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .professional-card {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .professional-icon {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+    }
+
+    .professional-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
 /* Contact */
 .contact-grid {
     display: grid;
