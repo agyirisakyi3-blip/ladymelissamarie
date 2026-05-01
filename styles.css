@@ -1916,6 +1916,122 @@ img {
     color: var(--secondary-color);
 }
 
+/* Teachings Content Styles */
+.teachings-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    padding: 10px 24px;
+    border: 2px solid var(--secondary-color);
+    background: transparent;
+    color: var(--secondary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--gradient-secondary);
+    color: #000000;
+    border-color: var(--secondary-color);
+}
+
+.teachings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.teaching-card {
+    background: #111111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.teaching-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-secondary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.teaching-card:hover::before {
+    opacity: 1;
+}
+
+.teaching-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.teaching-card .teaching-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.teaching-card .teaching-icon i {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.teaching-category {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--secondary-color);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.teaching-card h3 {
+    font-size: 1.15rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.teaching-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.teaching-date {
+    display: inline-block;
+    color: rgba(212, 175, 55, 0.7);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 /* Responsive for credentials */
 @media (max-width: 1024px) {
     .credentials-grid {
