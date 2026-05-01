@@ -545,6 +545,300 @@ img {
     align-items: start;
 }
 
+/* Spiritual Journey */
+.spiritual-journey {
+    background: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.spiritual-journey::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.journey-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.journey-highlight {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(212, 175, 55, 0.05));
+    border-left: 4px solid var(--secondary-color);
+    padding: 40px;
+    border-radius: 0 20px 20px 0;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.journey-date {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.journey-date i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.journey-date span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.journey-highlight p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.journey-growth {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.journey-growth p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Calling & Assignment */
+.calling-assignment {
+    background: var(--gradient-dark);
+    position: relative;
+}
+
+.calling-assignment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 0L40 20L20 40L0 20z'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.calling-assignment .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.calling-assignment .section-header h2 {
+    color: white;
+}
+
+.calling-assignment .section-header p {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.calling-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.calling-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.calling-card:nth-child(1) { animation-delay: 0.1s; }
+.calling-card:nth-child(2) { animation-delay: 0.2s; }
+.calling-card:nth-child(3) { animation-delay: 0.3s; }
+.calling-card:nth-child(4) { animation-delay: 0.4s; }
+
+.calling-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.calling-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(30, 58, 138, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.5s ease;
+}
+
+.calling-card:hover .calling-icon {
+    transform: scale(1.15) rotate(10deg);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.calling-icon i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.calling-card:hover .calling-icon i {
+    color: white;
+}
+
+.calling-card h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.calling-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* Encounters Timeline */
+.encounters {
+    background: var(--light-color);
+    position: relative;
+}
+
+.encounters-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.encounters-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--primary-color));
+    border-radius: 3px;
+}
+
+.encounter-item {
+    display: flex;
+    gap: 40px;
+    padding: 30px 0;
+    position: relative;
+}
+
+.encounter-marker {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background: white;
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.encounter-item:hover .encounter-marker {
+    transform: scale(1.15);
+    background: var(--secondary-color);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.encounter-marker i {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.encounter-item:hover .encounter-marker i {
+    color: white;
+}
+
+.encounter-content {
+    background: white;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: var(--shadow-md);
+    flex: 1;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.encounter-content::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: white;
+}
+
+.encounter-item:hover .encounter-content {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.encounter-date {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.encounter-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.encounter-content p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* About Full */
+.about-full-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+}
+
 .about-full-image {
     position: relative;
     border-radius: 20px;
@@ -1736,22 +2030,48 @@ img {
         position: relative;
         top: 0;
     }
+
+    .calling-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .encounters-timeline::before {
+        left: 20px;
+    }
+
+    .encounter-marker {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .encounter-item {
+        gap: 25px;
+    }
+
+    .journey-highlight {
+        padding: 25px;
+    }
     
-    .services-grid,
-    .mv-grid,
-    .values-grid,
-    .units-grid,
-    .gallery-grid {
-        grid-template-columns: 1fr;
+    .calling-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
+    .encounters-timeline::before {
+        left: 15px;
+    }
+
+    .encounter-item {
         gap: 20px;
+        padding: 15px 0;
     }
 
-    .stat-number {
-        font-size: 2.5rem;
+    .encounter-content {
+        padding: 20px;
+    }
+
+    .encounter-content h3 {
+        font-size: 1.1rem;
     }
 
     .vision-banner {
