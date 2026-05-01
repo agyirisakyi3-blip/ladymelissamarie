@@ -733,10 +733,18 @@ img {
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
+    overflow: hidden;
 }
 
 .unit-icon i {
     font-size: 2rem;
+}
+
+.unit-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .unit-header h3 {
