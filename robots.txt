@@ -1,4 +1,32 @@
+# Robots.txt for ladymelissamarie.com
+# https://ladymelissamarie.com/robots.txt
+
 User-agent: *
 Allow: /
+Disallow: /node_modules/
+Disallow: /backups/
+Disallow: /*.docx$
+Disallow: /read-docx.js
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /upgrade.ps1
 
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://ladymelissamarie.com/sitemap.xml
+
+# Specific rules for major crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /Lady.jpeg
+Allow: /logo\ company/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

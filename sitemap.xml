@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://ladymelissamarie.com/</loc>
         <lastmod>2026-05-01</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
             <image:loc>https://ladymelissamarie.com/Lady.jpeg</image:loc>
             <image:title>Lady Prophetess Melissa Marie Justine Agbelom</image:title>
+            <image:caption>Christian leader, counsellor, and theologian committed to raising believers</image:caption>
         </image:image>
     </url>
     <url>
         <loc>https://ladymelissamarie.com/about.html</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://ladymelissamarie.com/images/praise13.jpeg</image:loc>
+            <image:title>About Lady Prophetess Melissa Marie</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://ladymelissamarie.com/teachings.html</loc>
+        <lastmod>2026-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://ladymelissamarie.com/images/praise10.jpeg</image:loc>
+            <image:title>Teachings and Resources</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://ladymelissamarie.com/mission.html</loc>
@@ -30,16 +46,10 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://ladymelissamarie.com/teachings.html</loc>
-        <lastmod>2026-05-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://ladymelissamarie.com/credentials.html</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ladymelissamarie.com/contact.html</loc>
