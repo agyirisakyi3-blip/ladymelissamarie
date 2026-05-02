@@ -316,6 +316,30 @@ img {
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
 }
 
+.nav-donate-btn {
+    background: var(--gradient-secondary) !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;
+}
+
+.nav-donate-btn::before,
+.nav-donate-btn::after {
+    display: none !important;
+}
+
+.nav-donate-btn:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5) !important;
+}
+
+.nav-donate-btn i {
+    margin-right: 5px;
+}
+
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -3506,6 +3530,7 @@ img {
     .nav-links li:nth-child(5) { animation-delay: 0.25s; }
     .nav-links li:nth-child(6) { animation-delay: 0.3s; }
     .nav-links li:nth-child(7) { animation-delay: 0.35s; }
+    .nav-links li:nth-child(8) { animation-delay: 0.4s; }
 
     @keyframes mobileNavItemSlide {
         from { opacity: 0; transform: translateX(30px); }
