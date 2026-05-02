@@ -1,0 +1,18 @@
+{
+    "name": "Lady Prophetess Melissa Marie",
+    "short_name": "Lady Melissa",
+    "description": "A Christian leader, counsellor, and theologian committed to raising believers through biblical teaching, prayer, and spiritual formation.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1E3A8A",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "images/melissa.jpeg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ]
+}
