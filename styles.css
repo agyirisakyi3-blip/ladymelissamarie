@@ -2355,6 +2355,88 @@ img {
     line-height: 1.6;
 }
 
+/* Donation Section */
+.donation-section {
+    background: var(--gradient-dark);
+    color: white;
+}
+
+.donation-section .section-header p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.donation-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.donation-card:nth-child(1) { animation-delay: 0.1s; }
+.donation-card:nth-child(2) { animation-delay: 0.2s; }
+.donation-card:nth-child(3) { animation-delay: 0.3s; }
+
+.donation-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--secondary-color);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.donation-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.5s ease;
+}
+
+.donation-card:hover .donation-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+.donation-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.donation-card h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.donation-detail {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.donation-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
 /* Teachings Page */
 .teachings-intro {
     text-align: center;
@@ -3548,7 +3630,8 @@ img {
     }
 
     .snapshot-grid,
-    .cta-cards-grid {
+    .cta-cards-grid,
+    .donation-grid {
         grid-template-columns: 1fr;
     }
 
